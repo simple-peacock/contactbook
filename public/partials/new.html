@@ -1,0 +1,60 @@
+
+
+<div class="row">
+
+    <form name="newContactForm" novalidate class="newContactForm" ng-submit="newContactForm.$valid && addContact()">
+
+        <div class="row">
+
+            <div class="input-field">
+
+                <input
+                    type="text"
+                    name="name"
+                    ng-model="formData.name"
+                    placeholder="Name"
+                    ng-minlength="4"
+                    ng-maxlength="30"
+                    ng-pattern="/^(\D)+$/"
+                    required
+                />
+
+                <span ng-show="newContactForm.name.$error.minlength">Four characters minimum length.</span>
+                <span ng-show="newContactForm.name.$error.maxlength">Thirty characters maximum length.</span>
+                <span ng-show="newContactForm.name.$dirty && newContactForm.name.$error.required">Name is required.</span>
+                <span ng-show="newContactForm.name.$error.pattern">Letters only in the name please.</span>
+
+            </div>
+
+
+            <div class="input-field">
+
+                <input
+                    type="text"
+                    name="phone"
+                    ng-model="formData.phone"
+                    placeholder="Phone Number"
+                    ng-minlength="8"
+                    ng-maxlength="30"
+                    ng-pattern="/^(\d)+$/"
+                    required
+                />
+
+
+                <span ng-show="newContactForm.phone.$error.minlength">Eigth digits minimum length.</span>
+                <span ng-show="newContactForm.phone.$error.maxlength">Thirty digits maximum length.</span>
+                <span ng-show="newContactForm.phone.$dirty && newContactForm.phone.$error.required">Phone number is required.</span>
+                <span ng-show="newContactForm.phone.$error.pattern">Digits only in the phone number please.</span>
+
+            </div>
+
+        </div>
+
+        <button class="btn waves-effect waves-light" type="submit">Add Now</button>
+
+    </form>
+
+</div>
+
+
+
