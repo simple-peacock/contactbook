@@ -26,7 +26,7 @@
 
 
 #### .env example
-
+```
 APP_ENV=local
 APP_DEBUG=true
 APP_KEY=SomeRandomKey!!!
@@ -43,6 +43,6 @@ DB_PASSWORD=password
 CACHE_DRIVER=memcached
 SESSION_DRIVER=memcached
 QUEUE_DRIVER=database
-
+```
 
 
