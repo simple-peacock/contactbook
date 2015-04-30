@@ -28,7 +28,7 @@
 
     <div class="row center">
 
-        <div class="col s4 offset-s4">
+        <div class="col s6 offset-s3">
 
 
             <h4 class="floating-heading">Contact Details</h4>
